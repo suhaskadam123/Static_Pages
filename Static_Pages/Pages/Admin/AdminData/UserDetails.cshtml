@@ -1,0 +1,30 @@
+﻿@page
+@using System.Data;
+
+@model Static_Pages.Pages.Admin.AdminData.UserDetailsModel
+@{
+}
+<h1>UserDetails</h1>
+<table>
+  <thead>
+     <tr>
+            <th>CostomerId</th>
+            <th>Username</th>
+            <th>Password</th>
+             <th>Email</th>
+            
+        </tr>
+  </thead>
+  <tbody>
+   @foreach (DataRow row in Model.UserInfo.Tables[0].Rows)
+        {
+            <tr>
+                <td>@row["Id"]</td>
+                <td>@row["Username"]</td>
+                <td>@row["Password"]</td>
+                <td>@row["Email"]</td>
+            </tr>
+        }
+    
+  </tbody>
+</table>

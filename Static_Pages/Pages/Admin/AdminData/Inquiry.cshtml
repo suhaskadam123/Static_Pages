@@ -1,0 +1,52 @@
+﻿@page
+@using System.Data;
+@model Static_Pages.Pages.Admin.AdminData.InquiryModel
+@{
+}
+<h1>Contact Form Details</h1>
+@*<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+        @foreach (DataRow row in Model.Inquiry.Tables[3].Rows)
+        {
+            <tr>
+                <td>@row["Name"]</td>
+                <td>@row["Email"]</td>
+                <td>@row["Message"]</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>*@
+
+<table>
+  <thead>
+     <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+  </thead>
+  <tbody>
+   @foreach (DataRow row in Model.Inquiry.Tables[0].Rows)
+        {
+            <tr>
+                <td>@row["Name"]</td>
+                <td>@row["Email"]</td>
+                <td>@row["Message"]</td>
+            </tr>
+        }
+    
+  </tbody>
+</table>

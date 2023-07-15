@@ -1,0 +1,66 @@
+﻿@page
+@model Static_Pages.Pages.BookingSummeryModel
+@{
+    ViewData["Title"] = "Trek Booking";
+}
+@{
+   
+}
+
+<h2>Trek Booking</h2>
+@{
+    if (Model.IsPosted)
+    {
+        <p>Your trek booking has been submitted successfully!</p>
+        <p>We will Connect shortly</p>
+    }
+}
+<form method="post">
+    <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" class="form-control" required>
+    </div><br /><br />
+    
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+    </div><br /><br />
+
+    
+    <div>
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" name="contactNumber" class="form-control" required>
+    </div><br /><br />
+
+    
+    <div>
+        <label for="trekName">Trek Name:</label>
+        <select id="trekName" name="trekName" class="form-control" required>
+      <option value="Sinhgad Fort">Sinhgad Fort</option>
+      <option value="Lonavla">Lonavla</option>
+      <option value="Devkund Waterfall">Devkund Waterfall</option>
+      <option value="Tamhini Ghat">Tamhini Ghat</option>
+      <option value="Malshej Ghat">Malshej Ghat</option>
+      <option value="Matheran">Matheran</option>
+      <option value="Karnala Bird sentury">Karnala Bird sentury</option>
+      <option value="Panchgani">Panchgani</option>
+      <option value="Visapur">Visapur</option>
+        </select>
+    </div><br /><br />
+
+    
+    <div>
+        <label for="numberOfTrekkers">Number of Trekkers:</label>
+        <input type="number" id="numberOfTrekkers" name="numberOfTrekkers" class="form-control" required>
+    </div><br /><br />
+
+    
+    <div>
+        <label for="totalPrice">Total Price:</label>
+        <input type="number" id="totalPrice" name="totalPrice" class="form-control" value="@Model.TotalPrice" required>
+    </div><br /><br />
+
+    
+    <button type="submit" class="btn btn-primary">Pay Now</button>
+</form>
+

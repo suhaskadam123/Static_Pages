@@ -1,0 +1,16 @@
+﻿@page
+@model Static_Pages.Pages.Admin.AdminfirstpageModel
+@{
+    ViewData["Tital"] = "Welcome";
+}
+<h3>Welcome @Model.Username</h3>
+
+<div>
+        
+        <a class="button" href="/admin/AdminData/UserDetails">User Detail</a><br />
+        <a class="button" href="/admin/AdminData/BookingManagement">UpdateTrek</a><br />
+        <a class="button" href="/admin/AdminData/CostomerBooking">Costomer Booking</a><br />
+        <a class="button" href="/admin/AdminData/Inquiry">Inquiry</a><br />
+
+
+    </div>

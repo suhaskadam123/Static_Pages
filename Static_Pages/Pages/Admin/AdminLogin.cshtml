@@ -1,0 +1,25 @@
+﻿@page
+@model Static_Pages.Pages.Admin.AdminLoginModel
+@{
+    ViewData["Title"] = "Admin Login";
+}
+<form method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="Username" required>
+    </div>
+    <br /><br />
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password" required>
+    </div>
+        <br /><br />
+    <div>
+        <input type="submit" value="Login">
+    </div>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <p>@Model.ErrorMessage</p>
+}

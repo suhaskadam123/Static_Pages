@@ -1,0 +1,28 @@
+﻿@page
+@model Static_Pages.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (ViewData["Message"] != null)
+{
+    <div class="alert alert-success">@ViewData["Message"]</div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="Name" required>
+    </div><br /><br />
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="Email" required>
+    </div><br /><br />
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="Message" required></textarea>
+    </div><br /><br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

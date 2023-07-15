@@ -1,0 +1,35 @@
+﻿@page
+@using System.Data;
+
+@model Static_Pages.Pages.Admin.AdminData.CostomerBookingModel
+@{
+}
+<h1>CostomerBooking</h1>
+<table>
+  <thead>
+     <tr>
+            <th>CostomerId</th>
+            <th>FullName</th>
+            <th>Email</th>
+            <th>ContactNumber</th>
+            <th>TrekName</th>
+            <th>NumberOfTrekkers</th>
+            <th>TotalPrce</th>
+        </tr>
+  </thead>
+  <tbody>
+   @foreach (DataRow row in Model.Bookings.Tables[0].Rows)
+        {
+            <tr>
+                <td>@row["CostomerId"]</td>
+                <td>@row["FullName"]</td>
+                <td>@row["Email"]</td>
+                <td>@row["ContactNumber"]</td>
+                <td>@row["TrekName"]</td>
+                <td>@row["NumberOfTrekkers"]</td>
+                <td>@row["TotalPrice"]</td>
+            </tr>
+        }
+    
+  </tbody>
+</table>
