@@ -1,0 +1,21 @@
+USE [TrekBooking]
+GO
+
+/****** Object:  Table [dbo].[TrekDetails]    Script Date: 15-08-2023 23:56:32 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TrekDetails](
+	[TrekId] [int] NOT NULL,
+	[Image] [image] NOT NULL,
+	[Trekname] [nvarchar](50) NOT NULL,
+	[Date] [date] NOT NULL,
+	[PickupLocation] [nvarchar](50) NOT NULL,
+	[Price] [money] NOT NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
