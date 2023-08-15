@@ -1,0 +1,15 @@
+USE [TrekBooking]
+GO
+
+/****** Object:  Table [dbo].[AdminLogin]    Script Date: 15-08-2023 23:53:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[AdminLogin](
+	[Username] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NOT NULL
+) ON [PRIMARY]
+GO
