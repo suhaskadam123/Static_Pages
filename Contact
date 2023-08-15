@@ -1,0 +1,18 @@
+USE [TrekBooking]
+GO
+
+/****** Object:  Table [dbo].[Contact]    Script Date: 15-08-2023 23:55:43 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Contact](
+	[Name] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[Message] [nvarchar](max) NOT NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
